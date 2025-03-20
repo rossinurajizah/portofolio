@@ -1,0 +1,654 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 100px; /* Sesuaikan ukuran logo */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin-left: 150px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.user-icon i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #4a90e2;
+}
+
+.profile-img {
+    width: 650px; /* Perbesar ukuran gambar */
+    border-radius: 10px;
+    margin-top: 50px; /* Tambahkan jarak agar tidak bertabrakan */
+    margin-bottom: -136px; /* Menghilangkan celah antara gambar dan About Me */
+}
+
+
+.porto-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(206, 199, 199, 0.2); /* Transparan seperti di desain */
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 150%; /* Naik ke atas gambar */
+    left: 50%;
+    text-decoration: none;
+    transform: translateX(-50%);
+    backdrop-filter: blur(5px); /* Efek blur agar lebih menarik */
+    z-index: 10;
+}
+
+
+
+/* About Section */
+.about {
+    background: #556783;
+    color: #fff;
+    padding: 80px 50px; /* Tambahkan lebih banyak padding */
+    text-align: center;
+    border-radius: 30px; /* Buat lebih melengkung */
+    margin: 50px; /* Tambahkan margin agar tidak mepet ke putih */
+}
+
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Supaya lebih seimbang */
+    gap: 40px; /* Tambahkan jarak antara gambar dan teks */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+
+
+.about-img {
+    width: 300px; /* Perbesar ukuran gambar */
+    max-width: 100%; /* Pastikan gambar tidak melebihi parent */
+    margin-right: 50px;
+}
+
+
+.about-text {
+    text-align: left;
+    padding: 0 20px;
+    max-width: 500px; /* Batasi lebar teks agar tidak kepanjangan */
+}
+
+
+/* Section Skills */
+.skills {
+    text-align: center;
+    padding: 80px 50px;
+    background: #f5f5f5;
+}
+
+.skills h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600; /* Semi-bold */
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0); /* Bener-bener transparan */
+    -webkit-text-stroke: 2px #556783; /* Stroke warna luar */
+    text-transform: uppercase; /* Kalau mau huruf besar semua */
+}
+
+
+.skills h2 span {
+    color: #4a90e2;
+}
+
+/* Grid 4 atas, 2 bawah */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    grid-template-areas:
+        "item1 item2 item3 item4"
+        ". item5 item6 .";
+}
+
+.skill-box:nth-child(1) { grid-area: item1; }
+.skill-box:nth-child(2) { grid-area: item2; }
+.skill-box:nth-child(3) { grid-area: item3; }
+.skill-box:nth-child(4) { grid-area: item4; }
+.skill-box:nth-child(5) { grid-area: item5; }
+.skill-box:nth-child(6) { grid-area: item6; }
+
+.skill-box {
+    width: 160px;
+    height: 160px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #556783;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    position: relative;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+}
+
+.skill-box img {
+    width: auto;
+    height: 60px; /* Samakan tinggi ikon */
+    max-height: 60px;
+    object-fit: contain; /* Pastikan gambar nggak terpotong */
+    margin-bottom: 40px;
+}
+
+/* Garis di bawah ikon */
+.skill-box::after {
+    content: "";
+    width: 70px; /* Panjang garis */
+    height: 2px;
+    background-color: #556783;
+    position: absolute;
+    top: 105px; /* Atur posisi di bawah ikon */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skill-box p {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    color: #556783;
+    -webkit-text-stroke: 0.5px #fff;
+    text-shadow: 0.5px 0.5px 0px #fff;
+}
+
+.skill-box span {
+    font-size: 12px;
+    color: #556783;
+    margin-top: -15px;
+}
+
+
+/* Section Hire Me */
+.hire-me {
+    text-align: center;
+    padding: 80px 50px;
+    background: #fff;
+}
+
+.hire-me h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1F1F1F;
+    font-family: 'Sora', sans-serif;
+}
+
+/* Styling untuk teks "Why Hire Me?" */
+.hire-text h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1F1F1F;
+    font-family: 'Sora', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+/* Efek pada kata "Why" */
+.hire-text h2 .highlight {
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    font-family: 'Sora', sans-serif;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Memberi efek garis luar pada teks "Why" */
+.hire-text h2 .highlight::before {
+    content: "Why";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    -webkit-text-stroke: 2px #4A4E69; /* Warna outline */
+    z-index: -1;
+}
+
+/* Layout untuk gambar & teks */
+.hire-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Supaya responsif */
+}
+
+/* Styling gambar */
+.hire-img {
+    width: 300px;
+    transform: translateX(-70px);
+}
+
+/* Tata letak teks */
+.hire-text {
+    max-width: 500px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+/* Styling paragraf */
+.hire-text p {
+    font-size: 16px;
+    color: #556783;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    justify-content: flex-start; /* Biar semua elemen rata kiri */
+    gap: 50px; /* Jarak antar elemen */
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column; /* Susun ke bawah */
+    align-items: flex-start; /* Rata kiri */
+}
+
+.stats h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4A4E69;
+    margin: 0;
+    text-align: left; /* Pastikan teksnya rata kiri */
+}
+
+.stats p {
+    font-size: 18px;
+    color: #556783;
+    margin: 0;
+    text-align: left; /* Pastikan teksnya rata kiri */
+}
+
+/* Tombol Hire Me */
+.hire-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4A4E69;
+    border: 2px solid #4A4E69;
+    border-radius: 50px;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hire-btn:hover {
+    background: #4A4E69;
+    color: #fff;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects {
+    text-align: center;
+    padding: 50px 0;
+}
+.projects h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+.projects h2 .highlight {
+    color: #4a90e2;
+    -webkit-text-stroke: 1px #333;
+    color: transparent;
+}
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4a5a70;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+}
+.project-card img {
+    width: 150px; /* Lebih kecil dari sebelumnya */
+    max-height: 300px; /* Batasi tinggi maksimal */
+    object-fit: contain; /* Hindari gambar terpotong */
+    border-radius: 10px;
+}
+
+.project-info {
+    text-align: left;
+    max-width: 60%;
+}
+.project-info h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.project-info h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.project-info p {
+    font-size: 14px;
+}
+.project-info a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    align-items: flex-start; /* Supaya sejajar ke atas */
+    padding-left: 55px;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    max-width: 350px; /* Lebar form dikurangi lagi supaya lebih pas */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Contact Actions (Sejajarkan tombol Send dan ikon sosial media) */
+.contact-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Tombol Send */
+.send-btn {
+    background: #4a567e;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-right: 5px;
+}
+
+.send-btn:hover {
+    background: #39415f;
+}
+
+/* Ikon Sosmed */
+.social-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.social-btn {
+    background: none;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-btn i {
+    font-size: 18px;
+    color: #4a567e;
+}
+
+.social-btn:hover {
+    background: #4a567e;
+    color: white;
+}
+
+.social-btn:hover i {
+    color: white;
+}
+
+/* Contact Details (Teks di Kanan) */
+.contact-info {
+    flex: 1;
+    max-width: 570px; /* Info kontak juga disesuaikan */
+    color: #333;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4a567e;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 500px; /* Supaya nggak terlalu melebar */
+}
+.email, .phone {
+    font-size: 18px; /* Perbesar teks */
+    font-weight: bold; /* Biar lebih mencolok */
+    margin-top: 10px; /* Beri jarak dari teks sebelumnya */
+    color: #4a567e; /* Sesuaikan dengan warna tema */
+}
+
+/* Footer */
+footer {
+    background: #4a567e;
+    color: white;
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+/* Footer Container */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px; /* Tambah jarak antar kolom */
+    padding: 0 40px;
+}
+
+/* Footer Kiri */
+.footer-left {
+    flex: 1;
+    min-width: 320px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Icon Sosmed di Atas */
+.footer-social-icons {
+    display: flex;
+    gap: 15px; /* Tambah jarak antar ikon */
+    margin-bottom: 15px;
+    order: -1; /* Selalu di atas */
+}
+
+.footer-social-icons a {
+    text-decoration: none;
+}
+
+.footer-social-icons i {
+    font-size: 22px; /* Perbesar sedikit */
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-social-icons i:hover {
+    color: #ddd;
+}
+
+/* Paragraf di Bawah Ikon */
+.footer-left p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+/* Footer Links */
+.footer-links {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+
+/* Pastikan "Quick Link" sejajar */
+.footer-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0; /* Tambah jarak antar item */
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Contact */
+.footer-contact {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+
+/* Pastikan Contact sejajar */
+.footer-contact h3 {
+    margin-bottom: 10px;
+}
+
+/* Jarak Konsisten */
+.footer-contact p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+/* Copyright */
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    margin-top: 30px;
+}
