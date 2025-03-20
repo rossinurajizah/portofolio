@@ -10,7 +10,6 @@ body {
 }
 
 /* Header */
-/* Header */
 header {
     display: flex;
     justify-content: center;
@@ -123,7 +122,7 @@ nav ul li a:hover {
     border: 1px solid #fff;
     border-radius: 20px;
     position: absolute;
-    top: 150%; /* Naik ke atas gambar */
+    top: 130%; /* Naik ke atas gambar */
     left: 50%;
     text-decoration: none;
     transform: translateX(-50%);
@@ -417,29 +416,29 @@ nav ul li a:hover {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    align-items: stretch; /* Pastikan semua kartu memiliki tinggi yang sama */
+    align-items: stretch;
 }
 
 /* Styling dasar untuk semua kartu */
 .testimonial-card {
     background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    width: 280px; /* Semua kartu memiliki ukuran tetap */
+    border: 1px solid #4a567e;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 15px; /* Mengurangi padding agar lebih rapat */
+    width: 280px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Buat konten tetap proporsional */
-    min-height: 370px; /* Menyamakan tinggi semua kartu */
+    justify-content: space-between;
+    min-height: 350px; /* Sesuaikan tinggi agar proporsional */
 }
 
 /* Kartu tengah dengan warna berbeda */
 .testimonial-card.main {
     background: #4a567e;
-    border: 2px solid #4a567e;
     color: white;
 }
 
@@ -453,21 +452,30 @@ nav ul li a:hover {
 /* Gaya garis di atas nama */
 .testimonial-card h3 {
     position: relative;
-    font-size: 1.1rem; /* Sedikit lebih kecil agar seragam */
+    font-size: 1.1rem;
     font-weight: bold;
-    margin-top: auto; /* Menjaga nama tetap sejajar */
+    margin-top: 0px; /* Menjaga nama lebih rapat dengan garis */
     text-align: center;
-    padding-top: 5px;
+    padding-top: 2px; /* Mengurangi jarak atas agar nama lebih dekat ke garis */
+}
+
+.testimonial-card.main h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0px;
+    text-align: center;
+    position: relative;
+    top: -5px; /* Menaikkan nama agar lebih dekat dengan garis */
 }
 
 /* Garis di atas nama untuk semua kartu */
 .testimonial-card h3::before {
     content: "";
     position: absolute;
-    top: -5px; /* Sejajarkan semua garis */
+    top: -10px; /* Menjaga garis lebih dekat dengan nama */
     left: 50%;
     transform: translateX(-50%);
-    width: 70px;
+    width: 75px;
     height: 2px;
     background-color: #374151;
 }
@@ -487,15 +495,14 @@ nav ul li a:hover {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Mengurangi jarak gambar dengan konten di bawahnya */
 }
 
 /* Gaya untuk teks di dalam kartu */
 .testimonial-card p {
     font-size: 14px;
     color: #3d4b61;
-    flex-grow: 1; /* Menjaga teks tetap proporsional */
-    margin-bottom: auto;
+    margin-bottom: 5px; /* Mengurangi jarak antar paragraf */
 }
 
 /* Warna teks untuk kartu tengah */
@@ -507,12 +514,20 @@ nav ul li a:hover {
 .testimonial-card span {
     font-size: 13px;
     color: #6c757d;
+    margin-top: 0px;
+    position: relative;
+    top: -50px; /* Menaikkan jabatan lebih dekat dengan nama */
 }
 
 /* Warna teks posisi di kartu tengah */
 .testimonial-card.main span {
     color: white;
+    margin-top: 0px; /* Mengurangi jarak agar jabatan lebih rapat */
+    position: relative;
+    top: -50px; /* Menaikkan jabatan lebih dekat dengan nama */
 }
+
+
 
 
 
@@ -839,11 +854,124 @@ footer {
     opacity: 0;
     transform: scale(0);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 90%; /* Skala font lebih kecil */
+    }
+
+    header {
+        padding: 12px 20px; /* Sesuaikan padding */
+    }
+
+    .logo img {
+        width: 80px; /* Perkecil logo */
+    }
+
     nav ul {
-        width: 50%;
+        gap: 20px; /* Sesuaikan jarak antar menu */
+    }
+
+    nav ul li a {
+        font-size: 15px; /* Kurangi ukuran teks menu */
+        padding: 6px 10px;
+    }
+
+    .user-icon i {
+        font-size: 18px; /* Ikon lebih kecil */
+    }
+
+    .hero h1 {
+        font-size: 50px; /* Kurangi ukuran heading */
+    }
+
+    .profile-img {
+        width: 550px; /* Sesuaikan ukuran gambar */
+    }
+
+    .about {
+        padding: 60px 40px; /* Kurangi padding */
+        margin: 30px; /* Kurangi margin */
+    }
+
+    .about-img {
+        width: 250px; /* Kurangi ukuran gambar */
+    }
+
+    .skills h2 {
+        font-size: 32px; /* Perkecil heading */
+        -webkit-text-stroke: 1.5px #556783;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr); /* Kurangi jumlah kolom */
+        grid-template-areas:
+            "item1 item2 item3"
+            "item4 item5 item6";
+    }
+
+    .skill-box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hire-me h2 {
+        font-size: 30px;
+    }
+
+    .hire-container {
+        flex-direction: column; /* Susun vertikal untuk tampilan lebih baik */
+        gap: 30px;
+    }
+
+    .hire-img {
+        width: 250px;
+        transform: none;
+    }
+
+    .hire-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .testimonial-container {
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        width: 250px;
+    }
+
+    .projects h2 {
+        font-size: 30px;
+    }
+
+    .project-card {
+        width: 90%;
+        flex-direction: column; /* Susun vertikal untuk tampilan lebih baik */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .project-card img {
+        width: 120px;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .container {
+        flex-direction: column; /* Susun vertikal */
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .contact-form {
+        max-width: 100%;
     }
 }
+
 @media screen and (max-width: 576px) {
     html, body {
         overflow-x: hidden; /* Hapus scroll horizontal */
@@ -955,50 +1083,40 @@ footer {
         backdrop-filter: blur(5px); /* Efek blur agar lebih menarik */
         z-index: 10;
     }
-    .about {
+/* About Section */
+    .about-content {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 90%;
-        width: 100%;
-        margin: 20px auto;
-        padding: 20px;
-        gap: 15px;
-        background-color: #4f658d;
-        border-radius: 15px;
-        flex-direction: row; /* Pastikan gambar & teks selalu sejajar */
-    }
-    
-    /* Ukuran gambar */
-    .about img {
-        width: 130px; /* Pastikan gambar tidak terlalu besar */
-        height: auto;
-        border-radius: 8px;
-    }
-    
-    /* Container teks */
-    .about .text-container {
-        flex: 1;
-        font-size: 12px;
-        line-height: 1.5;
-        text-align: left;
-        color: white;
+        flex-direction: row; /* Tetap kiri-kanan */
+        align-items: center; /* Biar sejajar */
+        justify-content: space-between; /* Jarak pas */
+        gap: 8px; /* Kurangi jarak supaya pas */
         max-width: 100%;
+        padding: 15px;
     }
-    
-    /* Judul "About Me" */
-    .about h2 {
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: white;
+
+    .about-img {
+        width: 90px; /* Gambar lebih kecil */
+        height: auto;
+        flex-shrink: 0; /* Jangan biarkan gambar mengecil */
     }
-    
-    /* Paragraf */
-    .about p {
-        font-size: 10px;
+
+    .about-text {
+        flex: 1; /* Biar teks nggak kepanjangan ke bawah */
+        max-width: 60%; /* Batasi lebar teks */
+        font-size: 9px; /* Perkecil font */
+        text-align: left;
+        line-height: 1.3; /* Lebih rapat */
+    }
+
+    .about-text h2 {
+        font-size: 11px; /* Kecilkan judul */
+        margin-bottom: 3px;
+    }
+
+    .about-text p {
+        font-size: 9px; /* Sesuaikan font paragraf */
         margin: 0;
-    }              
+    }           
 /* Grid 2 kolom untuk tampilan HP */
 .skills-container {
     display: grid;
