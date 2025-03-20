@@ -1,321 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Rossi the Fullstack Developer Portfolio & Skills</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Discover Rossi, a passionate Fullstack Developer with expertise in HTML, CSS" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rossi</title>
+    <link rel="stylesheet" href="coba.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="desktop-mockup">
-        <div class="desktop-view"></div>
-        <div class="main-column">
-            <div class="header-container">
-                <!-- header section -->
-                <header class="header">
-                    <img src="#" alt="Logo Header" class="logo" />
-                    <div class="menu-container">
-                        <div class="hamburger" id="hamburger">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                        <ul class="menu" id="menu">
-                            <li><a href="#"><p class="menu-item">Home</p></a></li>
-                            <li><a href="#"><p class="menu-item">About</p></a></li>
-                            <li><a href="#"><p class="menu-item">Skills</p></a></li>
-                            <li><a href="#"><p class="menu-item">Portfolio</p></a></li>
-                        </ul>
-                        <a href="#"><img src="#" alt="Lock Icon" class="lock-icon" /></a>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="user-icon"><i class="fa fa-user"></i></div>
+    </header>
+
+    <section class="hero">
+        <h1>I’m <span class="highlight">Rossi</span> <br> Fullstack Developer</h1>
+        <img src="images/profile1.png" alt="Rossi" class="profile-img">
+        <a href="#portfolio" class="porto-btn">Portfolio ↗</a>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <img src="images/profile2.png" alt="Rossi" class="about-img">
+            <div class="about-text">
+                <h2>About <span class="highlight">Me</span></h2>
+                <p>I am a junior Fullstack Developer and an Informatics student at Universitas Siliwangi. I have a strong interest in web development and design, with skills in HTML, CSS, JavaScript, PHP, and MySQL. I have experience in building responsive and user-friendly interfaces, as well as developing backend systems and managing databases.Additionally, I have a good understanding of UI/UX design using Figma, ensuring that applications are both functional and visually appealing. I am passionate about performance optimization, web security, and user experience, continuously learning to improve my development skills.Excited to contribute, collaborate, and grow in the world of fullstack development!</p>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h2><span class="highlight">My</span> Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <img src="images/html.png" alt="HTML">
+                <p>HTML</p>
+                <span>85%</span>
+            </div>
+            <div class="skill-box">
+                <img src="images/css.png" alt="CSS">
+                <p>CSS</p>
+                <span>80%</span>
+            </div>
+            <div class="skill-box">
+                <img src="images/php.png" alt="PHP">
+                <p>PHP</p>
+                <span>70%</span>
+            </div>
+            <div class="skill-box">
+                <img src="images/figma.png" alt="Figma">
+                <p>Figma</p>
+                <span>85%</span>
+            </div>
+            <div class="skill-box">
+                <img src="images/js.png" alt="JavaScript">
+                <p>JS</p>
+                <span>70%</span>
+            </div>
+            <div class="skill-box">
+                <img src="images/mysql.png" alt="MySQL">
+                <p>MySQL</p>
+                <span>85%</span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hire-me">
+        <div class="hire-container">
+            <img src="images/profile3.png" alt="Rossi" class="hire-img">
+            <div class="hire-text">
+                <h2><span class="highlight">Why</span> Hire Me?</h2>
+                <p>I have strong expertise in both front-end and back-end development, allowing me to build seamless, efficient, and scalable web applications. With a problem-solving mindset and a keen eye for user experience, I deliver high-quality solutions tailored to your needs.</p>
+                <div class="stats">
+                    <div>
+                        <h3>320+</h3>
+                        <p>Project Completed</p>
                     </div>
-                </header>
-                <!-- hero section -->
-                <div class="hero-section">
-                    <div class="intro-container">
-                        <h1 class="intro-text">
-                            <span>I'm&nbsp;</span>
-                            <span class="name">Rossi<br /></span>
-                            <span>Fullstack Developer</span>
-                        </h1>
-                        <div class="content-section">
-                            <div class="portfolio-section">
-                                <img src="#" alt="Portfolio Image" class="portfolio-image" />
-                                <div class="portfolio-details">
-                                    <p class="portfolio-title">Portfolio</p>
-                                    <img src="#" alt="Outline Icon" class="portfolio-icon" />
-                                </div>
-                            </div>
-                            <div class="about-section">
-                                <div class="about-details">
-                                    <div class="about-images">
-                                        <img src="#" alt="Main Image" class="about-image-primary" />
-                                        <img src="#" alt="Secondary Image" class="about-image-secondary" />
-                                    </div>
-                                    <div class="about-description">
-                                        <p class="about-title">
-                                            <span>About&nbsp;</span>
-                                            <span>Me</span>
-                                        </p>
-                                        <p class="about-text">
-                                            I am a junior Fullstack Developer and an Informatics student at Universitas Siliwangi. I have a strong interest in web development and design, with skills in HTML, CSS, JavaScript, PHP, and MySQL. I have experience in building responsive and user-friendly interfaces, as well as developing backend systems and managing databases.
-                                            Additionally, I have a good understanding of UI/UX design using Figma, ensuring that applications are both functional and visually appealing. I am passionate about performance optimization, web security, and user experience, continuously learning to improve my development skills.
-                                            Excited to contribute, collaborate, and grow in the world of fullstack development!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- skills section -->
-                <div class="skills-section">
-                    <h2 class="skills-title">
-                        <span>My</span>
-                        <span>&nbsp;</span>
-                        <span>Skills</span>
-                    </h2>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <img src="#" alt="Skill 1" class="skill-image" />
-                        </div>
-                        <div class="skill-item">
-                            <img src="#" alt="Skill 2" class="skill-image" />
-                        </div>
-                        <div class="skill-item">
-                            <img src="#" alt="Skill 3" class="skill-image" />
-                        </div>
-                        <div class="skill-item">
-                            <img src="#" alt="Skill 4" class="skill-image" />
-                        </div>
-                        <div class="skill-item">
-                            <img src="#" alt="Skill 5" class="skill-image" />
-                        </div>
-                        <div class="skill-item">
-                            <img src="#" alt="Skill 6" class="skill-image" />
-                        </div>
-                    </div>
-                    <div class="hire-me-section">
-                        <h3 class="hire-title">
-                            <span>Why</span>
-                            <span>&nbsp;</span>
-                            <span>Hire me</span>
-                            <span>?</span>
-                        </h3>
-                        <p class="hire-description">
-                            I have strong expertise in both front-end and back-end development, allowing me to build seamless, efficient, and scalable web applications. With a problem-solving mindset, a keen eye for user experience, and proficiency in modern technologies, I can deliver high-quality solutions tailored to your needs.
-                        </p>
-                        <div class="stats">
-                            <div class="stat-item">
-                                <h4 class="stat-number">320+</h4>
-                                <p class="stat-description">Project Completed</p>
-                            </div>
-                            <div class="stat-item">
-                                <h5 class="stat-number">230+</h5>
-                                <p class="stat-description">Project Completed</p>
-                            </div>
-                        </div>
-                        <button class="hire-button">Hire me</button>
+                    <div>
+                        <h3>230+</h3>
+                        <p>Project Completed</p>
                     </div>
                 </div>
-                <!-- projects section -->
-                <div class="projects-section">
-                    <div class="testimonials-section">
-                        <h6 class="testimonials-title">Testimonial</h6>
-                        <div class="testimonials-list">
-                            <div class="testimonial-item">
-                                <img src="#" alt="Testimonial Image" class="testimonial-image" />
-                                <div class="testimonial-details">
-                                    <p class="testimonial-description">
-                                        Clean, structured code and a solid understanding of both design and function.
-                                    </p>
-                                    <h5 class="testimonial-author">
-                                        <span>Alifa Gustia Rahmi<br /></span>
-                                        <span>UI/UX Designer at</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="testimonial-item">
-                                <img src="#" alt="Testimonial Image" class="testimonial-image" />
-                                <div class="testimonial-details">
-                                    <p class="testimonial-description">
-                                        A skilled Fullstack Developer who seamlessly handles both frontend and backend, creating efficient and user-friendly applications.
-                                    </p>
-                                    <h5 class="testimonial-author">
-                                        <span>Hilma Amalia Putri<br /></span>
-                                        <span>Lead Developer at TechSolutions</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="testimonial-item">
-                                <img src="#" alt="Testimonial Image" class="testimonial-image" />
-                                <div class="testimonial-details">
-                                    <p class="testimonial-description">
-                                        Great problem-solving skills and a strong grasp of both design and functionality.
-                                    </p>
-                                    <h5 class="testimonial-author">
-                                        <span>Aura Alima Thufailah<br /></span>
-                                        <span>Project Manager at DigitalX</span>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projects-container">
-                        <h1 class="projects-title">Projects</h1>
-                        <div class="project-item">
-                            <div class="project-header">
-                                <img src="#" alt="Project Image" class="project-image" />
-                                <div class="project-details">
-                                    <h1 class="project-index">01</h1>
-                                    <h2 class="project-title">Website Pasar Bumi</h2>
-                                    <p class="project-description">
-                                        Pasar Bumi is an e-commerce platform that connects farmers directly with buyers, making it easier to market agricultural products and ensuring price transparency. With a user-friendly design, online payments, and search and review features, it supports local agriculture through digital technology. 
-                                    </p>
-                                    <img src="#" alt="Link" class="project-link" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item">
-                            <div class="project-header">
-                                <div class="project-info">
-                                    <h1 class="project-index">02</h1>
-                                    <h2 class="project-title">Website Vecalculate</h2>
-                                    <p class="project-description">
-                                        Vecalculate is a web-based calculation tool designed to simplify vector matrix determinant computations. Developed to assist students and professionals, it provides instant results along with clear explanations to enhance understanding. With a user-friendly interface, Vecalculate makes complex mathematical operations more accessible.
-                                    </p>
-                                    <img src="#" alt="Link" class="project-link" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item">
-                            <div class="project-header">
-                                <div class="project-info">
-                                    <h1 class="project-index">03</h1>
-                                    <h2 class="project-title">Website Tien Salon</h2>
-                                    <p class="project-description">
-                                        TIEN SALON is a web-based salon management platform developed by our team to streamline booking, payment, and customer management. Designed with a user-friendly interface, it allows salon owners to manage reservations, track payments, and enhance customer experience efficiently. With features like online booking, service categorization, and secure transactions, TIEN SALON helps modernize salon operations with digital solutions.
-                                    </p>
-                                    <img src="#" alt="Link" class="project-link" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <a href="#contact" class="hire-btn">Hire me</a>
+            </div>
+        </div>
+    </section> 
+    <section class="projects">
+        <h2><span class="highlight">My</span> Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="images/project1.png" alt="Website Pasar Bumi">
+                <div class="project-info">
+                    <h3>01</h3>
+                    <h4>Website Pasar Bumi</h4>
+                    <p>Pasar Bumi is an e-commerce platform that connects farmers directly with buyers, making it easier to market agricultural products and ensuring price transparency.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <!-- contact section -->
-                <div class="contact-section">
-                    <div class="contact-form">
-                        <div class="contact-form-container">
-                            <div class="contact-input-column">
-                                <label class="contact-input">
-                                    <input name="name" placeholder="Your name" type="text" />
-                                </label>
-                                <label class="contact-input">
-                                    <input name="email" placeholder="Email" type="email" />
-                                </label>
-                                <label class="contact-input">
-                                    <input name="website" placeholder="Your website (If exists)" type="text" />
-                                </label>
-                                <textarea class="contact-textarea" name="message" placeholder="How can I help?*"></textarea>
-                                <div class="contact-actions">
-                                    <button class="contact-button">Send</button>
-                                    <div class="social-icons">
-                                        <button class="social-button">
-                                            <img src="#" alt="Social Icon" />
-                                        </button>
-                                        <button class="dashboard-button">
-                                            <img src="#" alt="Dashboard Icon" />
-                                        </button>
-                                        <button class="social-button">
-                                            <img src="#" alt="Social Icon" />
-                                        </button>
-                                        <button class="social-button">
-                                            <img src="#" alt="Play Icon" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contact-text-column">
-                                <div class="contact-text">
-                                    <div class="contact-header">
-                                        <h1 class="contact-header-text">Let's</h1>
-                                        <h1 class="contact-header-text">for</h1>
-                                    </div>
-                                    <h1 class="contact-header-text">Something special</h1>
-                                </div>
-                                <p class="contact-description">
-                                    I seek to push the limits of creativity to create high-engaging, user-friendly, and interactive experiences.
-                                </p>
-                                <div class="contact-info">
-                                    <h3 class="contact-email">rossinurajizah@gmail.com</h3>
-                                    <h3 class="contact-phone">+628123456709</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- footer section -->
-                    <footer class="footer">
-                        <div class="footer-container">
-                            <div class="footer-social">
-                                <div class="footer-icons">
-                                    <img src="#" alt="Icon 1" class="footer-screenshot" />
-                                    <img src="#" alt="Icon 2" class="footer-social-icon" />
-                                    <img src="#" alt="Icon 3" class="footer-social-icon-white" />
-                                    <img src="#" alt="Icon 4" class="footer-volume" />
-                                    <img src="#" alt="Icon 5" class="footer-google" />
-                                </div>
-                                <p class="footer-description">
-                                    The right solutions at the right time drive success. I help build seamless applications to keep you ahead.
-                                </p>
-                            </div>
-                            <div class="footer-links">
-                                <div class="footer-quick-links">
-                                    <p class="footer-policy-title">Quick link</p>
-                                    <ul class="footer-links-list">
-                                        <li><a href="#"><div class="footer-link"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-link-text">Home</p></div></a></li>
-                                        <li><a href="#"><div class="footer-link"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-link-text">About</p></div></a></li>
-                                        <li><a href="#"><div class="footer-link"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-link-text">Skills</p></div></a></li>
-                                        <li><a href="#"><div class="footer-link"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-link-text">Portfolio</p></div></a></li>
-                                    </ul>
-                                </div>
-                                <div class="footer-contact">
-                                    <p class="footer-contact-title">Contact</p>
-                                    <div class="footer-contact-item">
-                                        <img src="#" alt="Home" class="footer-home-icon" />
-                                        <p class="footer-contact-text">44 Danwers, NY City, USA, 76</p>
-                                    </div>
-                                    <div class="footer-contact-item">
-                                        <img src="#" alt="Email" class="footer-email-icon" />
-                                        <p class="footer-contact-text">rossinurajizah@gmail.com</p>
-                                    </div>
-                                    <div class="footer-contact-item">
-                                        <img src="#" alt="Call" class="footer-call-icon" />
-                                        <p class="footer-contact-text">+62123456709</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="footer-policies">
-                                <p class="footer-policy-title">Quick link</p>
-                                <ul class="footer-policies-list">
-                                    <li><a href="#"><div class="footer-policy"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-policy-text">Terms and Conditions</p></div></a></li>
-                                    <li><a href="#"><div class="footer-policy"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-policy-text">Privacy Policy</p></div></a></li>
-                                    <li><a href="#"><div class="footer-policy"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-policy-text">Security</p></div></a></li>
-                                    <li><a href="#"><div class="footer-policy"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-policy-text">Cookie Policy</p></div></a></li>
-                                    <li><a href="#"><div class="footer-policy"><img src="#" alt="Arrow Right" class="footer-arrow" /><p class="footer-policy-text">Service Usage Policy</p></div></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-copyright">
-                            <p class="footer-copyright-text">
-                                Copyright © 2025 rossinurajizah. Hak Cipta Dilindungi
-                            </p>
-                            <img src="#" alt="Brand Image" class="footer-brand-image" />
-                        </div>
-                    </footer>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>02</h3>
+                    <h4>Website Vecalculate</h4>
+                    <p>Vecalculate is a web-based calculation tool designed to simplify vector multiplication and matrix determinant computations.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <img src="images/project2.png" alt="Website Vecalculate">
+            </div>
+            
+            <div class="project-card">
+                <img src="images/project3.png" alt="Website Tien Salon">
+                <div class="project-info">
+                    <h3>03</h3>
+                    <h4>Website Tien Salon</h4>
+                    <p>TIEN SALON is a web-based salon management platform developed to streamline booking, payment, and customer management.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <!-- FORM -->
+            <div class="contact-form">
+                <input type="text" placeholder="Your name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Your website (If exists)">
+                <textarea placeholder="How can I help?*"></textarea>
+    
+                <div class="contact-actions">
+                    <button class="send-btn">Send</button>
+                    <div class="social-buttons">
+                        <button class="social-btn"><i class="fab fa-facebook"></i></button>
+                        <button class="social-btn"><i class="fab fa-reddit"></i></button>
+                        <button class="social-btn"><i class="fab fa-twitter"></i></button>
+                        <button class="social-btn"><i class="fab fa-discord"></i></button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- CONTACT INFO -->
+            <div class="contact-info">
+                <h2>Let's <span class="highlight">talk</span> for</h2>
+                <h3>Something special</h3>
+                <p>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
+                <p class="email">rossinurajizah@gmail.com</p>
+                <p class="phone">+628123456709</p>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="footer-left">
+            <div class="footer-social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+            <p>The right solutions at the right time drive success. I help build seamless and efficient web applications to keep you ahead.</p>
+        </div>        
+        <div class="footer-links">
+            <h4>Quick Link</h4>
+            <ul>
+                <li><i class="fas fa-chevron-right"></i> Home</li>
+                <li><i class="fas fa-chevron-right"></i> About</li>
+                <li><i class="fas fa-chevron-right"></i> Skills</li>
+                <li><i class="fas fa-chevron-right"></i> Portfolio</li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 44 Danwers, NY City, USA, 70-102</p>
+            <p><i class="fas fa-envelope"></i> rossinurajizah@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +628123456709</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Link</h4>
+            <ul>
+                <li><i class="fas fa-chevron-right"></i> Terms And Conditions</li>
+                <li><i class="fas fa-chevron-right"></i> Privacy Policy</li>
+                <li><i class="fas fa-chevron-right"></i> Security Policy</li>
+                <li><i class="fas fa-chevron-right"></i> Cookie Policy</li>
+                <li><i class="fas fa-chevron-right"></i> Service Usage Policy</li>
+            </ul>
+        </div>
     </div>
+    <p class="copyright">Copyright &copy; 2025 rossinurajizah. Hak Cipta Dilindungi</p>
+</footer>
+
+
 </body>
 </html>
