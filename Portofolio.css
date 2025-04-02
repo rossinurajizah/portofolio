@@ -986,7 +986,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px)and (max-width: 480px) {
     /* Global Settings */
     html, body {
         overflow-x: hidden; /* Menghindari scroll horizontal */
