@@ -11,24 +11,31 @@
 <body>
     <header>
         <nav>
-        <div class="logo">
-            <img src="images/logo.png">
-        </div>
-        <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            
+            <div class="menu-toggle">
+                <input type="checkbox" id="menu-checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+    
+                <!-- Tambahkan Profile ke dalam menu hanya untuk mobile -->
+                <li class="profile-item"><a href="#">Profile</a></li>
             </ul>
-        <div class="user-icon"><i class="fa fa-user"></i></div>
+    
+            <!-- Ikon user hanya untuk desktop -->
+            <div class="user-icon"><i class="fa fa-user"></i></div>
         </nav>
-    </header>
+    </header>    
 
     <section class="hero">
         <h1>I’m <span class="highlight">Rossi</span> <br> Fullstack Developer</h1>
@@ -234,7 +241,6 @@
     </div>
     <p class="copyright">Copyright &copy; 2025 rossinurajizah. Hak Cipta Dilindungi</p>
 </footer>
-
-
+<script src="script.js"></script>
 </body>
 </html>
