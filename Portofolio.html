@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Portofolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -168,15 +169,16 @@
     <!-- Contact Section -->
     <section class="contact">
         <div class="container">
-            <!-- FORM -->
+            <!-- FORM KONTAK -->
             <div class="contact-form">
-                <input type="text" placeholder="Your name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Your website (If exists)">
-                <textarea placeholder="How can I help?*"></textarea>
-    
+                <form id="contactForm">
+                <input type="text" id="name" placeholder="Nama lengkap*" maxlength="50" required>
+                <input type="email" id="email" placeholder="Email*" maxlength="50" required>
+                <input type="text" id="phone" placeholder="Nomor Handphone*" maxlength="15" required>
+                <textarea id="message" placeholder="Pesan*" maxlength="300" required></textarea>
+            
                 <div class="contact-actions">
-                    <button class="send-btn">Send</button>
+                    <button type="submit" class="send-btn">Kirim</button>
                     <div class="social-buttons">
                         <button class="social-btn"><i class="fab fa-facebook"></i></button>
                         <button class="social-btn"><i class="fab fa-reddit"></i></button>
@@ -185,7 +187,6 @@
                     </div>
                 </div>
             </div>
-    
             <!-- CONTACT INFO -->
             <div class="contact-info">
                 <h2>Let's <span class="highlight">talk</span> for</h2>
@@ -194,8 +195,16 @@
                 <p class="email">rossinurajizah@gmail.com</p>
                 <p class="phone">+628123456709</p>
             </div>
+            </div>
         </div>
     </section>
+    <!-- POPUP -->
+    <div id="popupMessage">
+        <p id="popupText"></p>
+        <button onclick="$('#popupMessage').hide()">Tutup</button>
+    </div>
+  
+
     
 
 <!-- Footer Section -->
